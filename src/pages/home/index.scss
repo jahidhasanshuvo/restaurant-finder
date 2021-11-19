@@ -1,0 +1,36 @@
+@import "../../assets/styles/index.scss";
+.p-home {
+  padding-top: 30px;
+  height: fit-content;
+  @include device(sp) {
+    padding: 40px 15px;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @include device(sp) {
+      flex-direction: column;
+    }
+  }
+  &__text-input {
+    width: 350px;
+    margin-right: 50px;
+    @include device(sp) {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    .ant-input-prefix {
+      margin-right: 10px;
+      color: gray;
+      border: 1px solid gray;
+      font-size: 10px;
+      padding: 0 10px;
+    }
+  }
+}

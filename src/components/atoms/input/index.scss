@@ -1,0 +1,14 @@
+@import "../../../assets/styles/index.scss";
+.a-text-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  &__error {
+    color: $basic-red;
+    font-size: 11px;
+    &::before {
+      content: "* ";
+    }
+  }
+}

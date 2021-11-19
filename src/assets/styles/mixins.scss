@@ -1,0 +1,19 @@
+@mixin device($devices...) {
+  @each $device in $devices {
+    @if $device == sp {
+      @media screen and (max-width: $width-breakpoint) {
+        @content;
+      }
+    } @else if $device == small-pc {
+      @media screen and (min-width: $width-breakpoint + 1px) and (max-width: $width-pc) {
+        @content;
+      }
+    } @else if $device == pc {
+      @media screen and (min-width: $width-breakpoint + 1px) {
+        @content;
+      }
+    } @else {
+      @error "device() mixin only supports sp, tablet, pc. But you provided #{$device}.";
+    }
+  }
+}
